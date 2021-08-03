@@ -59,6 +59,7 @@ router.delete("/game/:id",(req,res)=>{
 router.post('/game',(req,res)=>{
   let name=req.body.name;
   let price=req.body.price;
+  price=price.replace(',','.');
 
   if(name==undefined || price==undefined){
     res.sendStatus(404)
@@ -86,6 +87,7 @@ router.put("/game/:id",(req,res)=>{
   }else{
     let newName=req.body.name;
     let newPrice=req.body.price;
+    newPrice=newPrice.replace(',','.');
     let object={}
 
     if(newPrice==undefined && newName==undefined){
