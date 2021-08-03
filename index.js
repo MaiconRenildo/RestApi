@@ -1,6 +1,6 @@
 const express=require('express');
 const app=express();
-const sequelize=require('sequelize');
+//const sequelize=require('sequelize');
 
 const cors=require("cors");
 app.use(cors());
